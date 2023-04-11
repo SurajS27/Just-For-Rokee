@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block body %}
+|<main class="table">
+    <h2 >Simplex Method</h2>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">Simplex Method</option>
+        <option value="2">Two-Phase method</option>
+        <option value="3">Dual Simplex Method</option>
+      </select>
+      <form class="" action="/templates/simres.html" method="post">
+          {% csrf_token %}
+        <table>
+            <tr>  
+                <td><label>max z = x</label></td>
+                <td><input type="number" name="z1"></td>
+                <td><label> + y</label></td>
+                <td><input type="number" name="z2"></td>
+            </tr>
+            <tr>
+                constraints
+            </tr>
+            <tr>                
+                <td><input type="number" name="x1"></td>
+                <td><label>x1 + </label></td>               
+                <td><input type="number" name="y1"></td>
+                <td><label> y1</label></td>
+                <td><label>&lt;=</label></td>
+                <td><input type="number" name="c1"></td>
+            </tr>
+            <tr>                
+                <td><input type="number" name="x2"></td>
+                <td><label>x2 + </label></td>                
+                <td><input type="number" name="y2"></td>
+                <td><label> y2</label></td>
+                <td><label>&lt;=</label></td>
+                <td><input type="number" name=""></td>
+            </tr>
+            <tr><td><label>   </label></td>
+                <td><label>   </label></td>
+                <td><input type="submit" name=""></td>
+            </tr>
+        </table>
+        
+      </form>
+      
+
+</main>
+{% endblock body %}

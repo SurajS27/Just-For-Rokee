@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+    }
+    
+    .grid>article {
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .grid>article img {
+        max-width: 100%;
+    }
+    
+    .text {
+        padding: 0 20px 20px;
+    }
+    
+    .text>button {
+        background: gray;
+        border: 0;
+        color: white;
+        padding: 10px;
+        width: 100%;
+    }
+</style>
+<main class="grid">
+    <article>
+        <img src="/static/algebra.jpg" alt="algebra">
+        <div class="text">
+            <h3>Applied Linear Algebra</h3>
+
+            <button>See More</button>
+        </div>
+    </article>
+    <article>
+        <img src="/static/or.jpeg" alt="Sample photo">
+        <div class="text">
+            <h3>Operational Research</h3>
+
+            <a href="/operational research"><button>See More</button></a>
+        </div>
+    </article>
+    <article>
+        <img src="/static/calculus.jpg" alt="Sample photo">
+        <div class="text">
+            <h3>Calculus</h3>
+
+            <button>See More</button>
+        </div>
+    </article>
+    <div class="card" style="width: 18rem;">
+        <img src="/static/KMap.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">K Maps</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">See More</a>
+        </div>
+      </div>
+
+</main>
+{% endblock body %}
